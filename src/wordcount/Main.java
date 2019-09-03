@@ -24,8 +24,15 @@ public class Main
       textHashMap.put(s, 1);
     }
   }
-  System.out.println(textHashMap.toString());
+
+// Have to cover the hashmap into array if whish to sort it
+
+  ArrayList<HashMap.Entry<String, Integer>> sortedMap = new ArrayList<HashMap.Entry<String, Integer>>(); // remember hashMaps have KEY and a value, array only can handle one value.
+  sortedMap.addAll(textHashMap.entrySet());
+
+  System.out.println(sortedMap.toString());
 
 
   }
+
 }
