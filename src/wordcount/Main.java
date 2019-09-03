@@ -25,12 +25,27 @@ public class Main
     }
   }
 
-// Have to cover the hashmap into array if whish to sort it
+// Have to convert the hashmap into array if whish to sort it
 
   ArrayList<HashMap.Entry<String, Integer>> sortedMap = new ArrayList<HashMap.Entry<String, Integer>>(); // remember hashMaps have KEY and a value, array only can handle one value.
   sortedMap.addAll(textHashMap.entrySet());
 
+
+
+
   System.out.println(sortedMap.toString());
+  System.out.println();
+
+// Now to sort the array from most to least occurrences
+  Collections.sort(sortedMap, new Comparator<HashMap.Entry<String, Integer>>()
+      {
+        public int compare(HashMap.Entry<String, Integer> o1, HashMap.Entry<String, Integer> o2)
+        {
+          return o2.getValue() - o1.getValue();
+        }
+      });
+  System.out.println(sortedMap.toString());
+  System.out.println();
 
 
   }
