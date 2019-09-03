@@ -33,8 +33,8 @@ public class Main
 
 
 
-  System.out.println(sortedMap.toString());
-  System.out.println();
+  // System.out.println(sortedMap.toString());
+  // System.out.println();
 
 // Now to sort the array from most to least occurrences
   Collections.sort(sortedMap, new Comparator<HashMap.Entry<String, Integer>>()
@@ -44,9 +44,14 @@ public class Main
           return o2.getValue() - o1.getValue();
         }
       });
-  System.out.println(sortedMap.toString());
-  System.out.println();
+  // System.out.println(sortedMap.toString());
+  // System.out.println();
+// displaying top 30 occurrences
+  for (int i = 0 ; i < 30; i++ )
+  {
+   System.out.println(sortedMap.get(i).getKey() + " " + sortedMap.get(i).getValue());
 
+  }
 
   }
 
